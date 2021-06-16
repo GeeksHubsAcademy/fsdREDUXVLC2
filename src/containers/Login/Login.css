@@ -1,0 +1,26 @@
+
+.vistaLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20em;
+}
+
+.logMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 3em;
+    background-color: red;
+    color: white;
+    border-radius: 0.8em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.logMe:hover{
+    background-color: darkred;
+    transition: 0.2s;
+}
