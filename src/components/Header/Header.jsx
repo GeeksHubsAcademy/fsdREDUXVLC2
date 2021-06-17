@@ -40,6 +40,7 @@ const Header = (props) => {
             <div className="vistaHeader">
                 <div className="links">
                     <div className="tap" onClick={()=>takeMe("/profile")}>{props.credentials?.user.name}</div>
+                    <div className="tap" onClick={()=>takeMe("/comprar")}>{props.cart?.quantity}</div>
                     <div className="tap" onClick={()=>logOut()}>Log Out</div>
                 </div>
             </div>
@@ -50,5 +51,6 @@ const Header = (props) => {
 }
 
 export default connect((state)=>({
-    credentials: state.credentials
+    credentials: state.credentials,
+    cart: state.cart
 }))(Header);

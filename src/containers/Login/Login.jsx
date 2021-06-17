@@ -27,7 +27,7 @@ const Login = (props) => {
 
         //Redireccion a Profile
         setTimeout(()=>{
-            history.push("/profile");
+            history.push("/cart");
         },500);
 
     }

@@ -1,0 +1,20 @@
+
+.vistaCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonCarrito {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 3em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botonCarrito:hover{
+    background-color: darkgrey;
+    transition: 0.5s;
+}

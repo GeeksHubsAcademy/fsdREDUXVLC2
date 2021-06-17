@@ -24,3 +24,8 @@
     color: black;
     transform:scale(1.1);
 }
+
+.fotoCarrito{
+    height: 1em;
+    width: 1em;
+}

@@ -5,6 +5,7 @@ import Home from './containers/Home/Home';
 import Login from './containers/Login/Login';
 import Profile from './containers/Profile/Profile';
 import Header from './components/Header/Header';
+import Cart from './containers/Cart/Cart';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path="/login" exact component={Login}/>
           <Route path="/profile" exact component={Profile}/>
+          <Route path="/cart" exact component={Cart}/>
       
         </Switch>
       </BrowserRouter>
