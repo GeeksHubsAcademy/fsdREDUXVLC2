@@ -1,4 +1,4 @@
-import {ADD_CART, REMOVE_CART, EMPTY_CART} from '../types';
+import {ADD_CART, REMOVE_CART, EDIT_CART, EMPTY_CART} from '../types';
 
 const initialState = {
     products: [],
@@ -13,6 +13,23 @@ const cartReducer = (state = initialState, action) => {
                 ...state,
                 products: [...state.products, action.payload]
             };
+
+        //Ejemplo de modificacion del carrito (otro producto que ya existia)
+        case EDIT_CART :
+            let nuevoCarrito = state.products.map( (item) => {
+				
+				if (item.nombre === action.payload.nombre) { // si ya existe
+					item.cantidad = action.payload.cantidad; // lo modifico
+				};
+				
+				return item;
+				
+			});
+		
+		return {
+			...state,
+			cart: nuevoCarrito
+		};
 
         //Ejemplo de reestablecimiento o borrado de datos
         case EMPTY_CART : 
