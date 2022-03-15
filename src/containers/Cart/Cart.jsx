@@ -24,7 +24,10 @@ const Cart = (props) => {
 
     const modificarCompra = (operando,item) => {
 
+
         if(item === 'counter'){
+
+            console.log(operando);
             switch(operando){
                 case '+':
 
@@ -46,6 +49,7 @@ const Cart = (props) => {
                 break;
     
                 case 'vaciar':
+                    console.log("eeeeeooooo")
                     props.dispatch({type:EMPTY_CART})
                 break;
             }
@@ -71,6 +75,7 @@ const Cart = (props) => {
                 break;
     
                 case 'vaciar':
+                    console.log("me meto aqui");
                     props.dispatch({type:EMPTY_CART})
                 break;
             }
@@ -86,13 +91,13 @@ const Cart = (props) => {
                 <div className="botonCarrito" onClick={()=>modificarCompra("+","counter")}>+</div>
                 <div className="producto"><img src={juego} alt="cyberCafe"/></div>
                 <div className="botonCarrito" onClick={()=>modificarCompra("-")}>-</div>
-                <div className="botonCarrito" onClick={()=>modificarCompra("vaciar")}>VACIAR</div>
+                <div className="botonCarrito" onClick={()=>modificarCompra("vaciar","counter")}>VACIAR</div>
             </div>
             <div className="contenedorItem">
                 <div className="botonCarrito" onClick={()=>modificarCompra("+","quake3")}>+</div>
                 <div className="producto"><img src={juego2} alt="cyberCafe"/></div>
                 <div className="botonCarrito" onClick={()=>modificarCompra("-")}>-</div>
-                <div className="botonCarrito" onClick={()=>modificarCompra("vaciar")}>VACIAR</div>
+                <div className="botonCarrito" onClick={()=>modificarCompra("vaciar","quake3")}>VACIAR</div>
             </div>
             
         </div>
